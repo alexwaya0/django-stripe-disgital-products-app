@@ -17,7 +17,7 @@ from pathlib import Path
 from decouple import config
 
 # Stripe
-STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLISHABLE_KEY')
+STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -140,7 +140,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-
+BACKEND_DOMAIN = config("BACKEND_DOMAIN")
+PAYMENT_SUCCESS_URL = config("PAYMENT_SUCCESS_URL")
+PAYMENT_CANCEL_URL = config("PAYMENT_CANCEL_URL")
 
 
 
