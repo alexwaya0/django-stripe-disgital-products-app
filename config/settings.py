@@ -151,7 +151,7 @@ PAYMENT_CANCEL_URL = config("PAYMENT_CANCEL_URL")
 
 
 
-
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
 
