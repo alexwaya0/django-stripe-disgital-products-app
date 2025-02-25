@@ -16,6 +16,10 @@ from pathlib import Path
 
 from decouple import config
 
+
+STRIPE_WEBHOOK_SECRET = config("STRIPE_WEBHOOK_SECRET")
+
+
 # Stripe
 STRIPE_PUBLISHABLE_KEY = config('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')

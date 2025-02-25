@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import CreateStripeCheckoutSessionView, CancelView, SuccessView
+from .views import CreateStripeCheckoutSessionView, StripeWebhookView, CancelView, SuccessView
 
 from .views import (ProductDetailView, ProductListView,)
 
@@ -14,6 +14,8 @@ urlpatterns = [
 
     path("success/", SuccessView.as_view(), name="success"),
     path("cancel/", CancelView.as_view(), name="cancel"),
+
+    path("webhooks/stripe/", StripeWebhookView.as_view(), name="stripe-webhook"),
 
 
 ]
